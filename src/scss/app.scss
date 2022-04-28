@@ -1,3 +1,18 @@
-body{
-    background-color: red;
-}
+@import "../components/crud";
+@import "_variables.scss";
+
+
+.App {
+    text-align: center;
+    margin: 0px;
+  }
+  
+  .leaflet-container {
+    width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+    margin-bottom: 20px;
+   
+  }
+  
+  

@@ -1,0 +1,57 @@
+$defaultFontSize: 16px;
+
+$color1:#808080;
+
+$primary-color:#0098d3;
+$primary-color-hover:#0280b3;
+$color4:#252527;
+
+$font-light: #fff;
+$font-grey-lyght: #e8e8e8;
+$font-grey: #808080;
+$font-grey-dark: #000;
+$font-dark-ligth: #252527;
+$font-dark: #000;
+
+$border-light: #fff;
+$border-grey-lyght: #e8e8e8;
+$border-grey: #808080;
+$border-grey-dark: #595959;
+$border-dark-ligth: #252527;
+$border-dark: #000;
+
+$background-light: #fff;
+$background-grey-lyght: #e8e8e8;
+$background-grey: #808080;
+$background-grey-dark: #595959;
+$background-dark-ligth: #252527;
+$background-dark: #000;
+$background-success: #84b84c1f;
+$background-error: #ff00001f;
+
+$color1:#1F2833;
+$color2:#45A29E;
+$color3:#C5C6C7;
+$color4:#66FCF1;
+$color5:#0B0C10;
+
+
+
+$success: #84b84c;
+$error: #f00;
+
+
+//Responsive down size
+$media-breackpoint-down-xs: 413.98px;
+$media-breackpoint-down-sm: 573.98px;
+$media-breackpoint-down-md: 767.98px;
+$media-breackpoint-down-lg: 991.98px;
+$media-breackpoint-down-xl: 1199.98px;
+
+
+//Responsive up size
+$media-breackpoitn-up-xs: 320px;
+$media-breackpoitn-up-sm: 576px;
+$media-breackpoitn-up-md: 768px;
+$media-breackpoitn-up-lg: 992px;
+$media-breackpoitn-up-xl: 1200px;
