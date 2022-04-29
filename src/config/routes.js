@@ -5,7 +5,7 @@ import Registro from "../pages/Crud";
 
 const routesUser= [
     {
-      patch: "/crud",   //La ruta
+      patch: "/",   //La ruta
       component: Inicio,  //el contenedor prinicpal "pages"
     }
    

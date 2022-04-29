@@ -3,33 +3,15 @@ import { UserTable } from "../components/UserTable";
 import { v4 as uuidv4 } from "uuid";
 import FormRegistro from "../components/FormRegistro";
 const Crud = () => {
-  const usuariosData = [
-    {
-      id: uuidv4(),
-      name: "camilo",
-      username: "jcamilomm7",
-    },
-    {
-      id: uuidv4(),
-      name: "santiago",
-      username: "tiago",
-    },
-    {
-      id: uuidv4(),
-      name: "Lorena",
-      username: "lore7",
-    },
-  ];
+  const usuariosData = [];
   //State
   const [usuarios, setUsuarios] = useState(usuariosData);
+  const [addUsuario, setAddUsuario] = useState(false);
 
   //Agregar usuarios
   const agregarUsuario = (usuario) => {
     usuario.id = uuidv4();
-    setUsuarios([
-      ...usuarios,
-      usuario
-    ])
+    setUsuarios([...usuarios, usuario]);
   };
 
   return (
@@ -39,8 +21,18 @@ const Crud = () => {
           <h1>CRUD App with hooks</h1>
         </div>
         <div className="col-md-6">
-          <h1>Add user</h1>
-          <FormRegistro/>
+          <button
+            id="add"
+            onClick={() => {
+              setAddUsuario(true);
+            }}
+          >
+            Add user
+          </button>
+          <FormRegistro
+            addUsuario={addUsuario}
+            agregarUsuario={agregarUsuario}
+          />
         </div>
         <div className="col-md-6">
           <h1>View user</h1>

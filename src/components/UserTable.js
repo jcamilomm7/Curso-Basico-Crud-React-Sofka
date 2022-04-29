@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 
 export const UserTable = (props) => {
   const usuarios = props.usuarios;
+  console.log(usuarios)
   return (
     <div className="col-12  divtable">
       <Table className="table" responsive id="tableusers" striped bordered hover>
@@ -18,8 +19,9 @@ export const UserTable = (props) => {
               usuarios.length > 0 ?
           usuarios.map((usuario,i) => (
             <tr key={i}>
-              <td className="td">{usuario.name}</td>
-              <td className="td">{usuario.username}</td>
+              <td className="td">{usuario.id}</td>
+              <td className="td">{usuario.nombre}</td>
+              <td className="td">{usuario.usuario}</td>
               <td id="tdactualizar" className="td">
                 <button  id="btneditar">Editar</button>
                 <button  id="btneliminar">Eliminar</button>
