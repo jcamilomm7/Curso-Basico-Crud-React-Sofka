@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { UserTable } from "../components/UserTable";
 import { v4 as uuidv4 } from "uuid";
 import FormRegistro from "../components/FormRegistro";
 const Crud = () => {
-  const usuariosData = [];
   //State
-  const [usuarios, setUsuarios] = useState(usuariosData);
+  const [usuarios, setUsuarios] = useState([]);
+
+  useEffect(() => {
+    setUsuarios(JSON.parse(localStorage.getItem("localUsuarios")))
+  }, []);
+
+ 
   const [addUsuario, setAddUsuario] = useState(false);
 
   //Agregar usuarios
   const agregarUsuario = (usuario) => {
     usuario.id = uuidv4();
-    setUsuarios([...usuarios, usuario]);
+    /*     setUsuarios(usuarios) */
+   usuarios.push(usuario);
+    localStorage.setItem("localUsuarios", JSON.stringify(usuarios));
   };
 
   return (

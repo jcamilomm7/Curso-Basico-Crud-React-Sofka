@@ -5,7 +5,6 @@ const FormRegistro = (props) => {
   const addUsuario = props.addUsuario;
   const agregarUsuario = props.agregarUsuario;
 
-
   //Estados temporales donde se alamcenan los datos, antes de armar el objeto a registrar
   const [nombretem, setNombretem] = useState("");
   const [usernametem, setUsernametem] = useState("");
@@ -20,7 +19,7 @@ const FormRegistro = (props) => {
 
   //Registrar persona
   const register = (e) => {
-    e.preventDefault();
+    /* e.preventDefault(); */
     const usuario = {
       id: 0,
       nombre: nombretem,
@@ -36,7 +35,7 @@ const FormRegistro = (props) => {
 
   return (
     <div className="containerRegadmin">
-      <form id="myform" onClick={limpiar} onSubmit={register}>
+      <form id="myform" onSubmit={register}>
         <div className="row">
           <div className="col-sm-12 col-md-6">
             <Form.Group className="mb-3" controlId="name">
@@ -62,7 +61,7 @@ const FormRegistro = (props) => {
           </div>
 
           <div className="col-sm-12 col-md-12 registro">
-            <Button className="btn" variant="primary" type="submit">
+            <Button  onClick={limpiar} className="btn" variant="primary" type="submit">
               Registarse
             </Button>
           </div>
