@@ -1,12 +1,12 @@
 
-import Inicio  from "../pages/Crud"
-import Registro from "../pages/Crud";
+import Usuarios from "../pages/Crud"
+
 
 
 const routesUser= [
     {
       patch: "/",   //La ruta
-      component: Inicio,  //el contenedor prinicpal "pages"
+      component: Usuarios,  //el contenedor prinicpal "pages"
     }
    
   ];

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "./config/routes"
 import './scss/app.scss';
 
+
 function App() {
   return (
     <div className="App">

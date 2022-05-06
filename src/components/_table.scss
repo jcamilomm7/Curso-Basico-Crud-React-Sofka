@@ -1,0 +1,36 @@
+@import '../scss/variables';
+
+#btneditar {
+    background-color: $verde;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    margin-left: 15%;
+    width: 35%;
+    margin-top: 20px;
+  }
+  
+  #btneliminar {
+    background-color: $error;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    margin-left: 15%;
+    width: 35%;
+    margin-top: 20px;
+  }
+  
+  .table{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .message{
+      text-align: center;
+      width: 60%;
+      margin-left: 20%;
+      background-color: $success;
+  }
+
+  
+  
+  
