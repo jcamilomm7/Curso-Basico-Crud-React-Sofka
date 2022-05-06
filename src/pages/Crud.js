@@ -6,7 +6,7 @@ import logoSofka from "../image/png/logo-sofkau.webp";
 
 const Crud = () => {
   //Estado que se utilizaran para  inicializar usuarios con un array vacio y luego irlo llenando
-  const [usuarios, setUsuarios] = useState([]);
+  let [usuarios, setUsuarios] = useState([]);
 
   //Estos estados es para controlar los button para saber si desplegar el formulario o la tabla usuarios
   const [contador, setContador] = useState(0);
@@ -14,7 +14,12 @@ const Crud = () => {
   const [listarUsuarios, setListarUsuario] = useState(false);
   //Con useEffect siempre estamos buscando los usuarios que estan en el localstorage
   useEffect(() => {
-    setUsuarios(JSON.parse(localStorage.getItem("localUsuarios")));
+    let usuariosLocal = JSON.parse(localStorage.getItem("localUsuarios"));
+    if (usuariosLocal === null) {
+      setUsuarios([]);
+    } else {
+      setUsuarios(usuariosLocal);
+    }
   }, []);
 
   //Funcion para enviarla por props al componente hijo para recibir el parametro del usuario almacenar
